@@ -1,23 +1,27 @@
-// const mysql = require('mysql');
-// const express = require('express');
-// const app = express();
+const mysql = require('mysql');
+const express = require('express');
+const app = express();
 
 
 
-// function connect(){}
-//         var con = mysql.createConnection({
-//           host: "localhost",
-//           user: "root",
-//           password: "password@123",
-//           database: "cricket"
-//         });
+function connect(){}
+        var con = mysql.createConnection({
+          host: "localhost",
+          user: "root",
+          password: "password@123",
+          database: "cricket"
+        });
 
-//         con.connect(function(err) {
-//             if (err) throw err;
+        con.connect(function(err) {
+            if (err)
+            {
+                console.console.log("Error");
+            }
             
-//               if (err) throw err;
-//           });
+              else
+              console.log("This is running from DB.js file");
+          });
     
     
 
-//       module.exports = connect;
+      module.exports = con;
