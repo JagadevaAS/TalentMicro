@@ -7,7 +7,11 @@ const db = require("../db");
 router.get("/tour", (req,res)=>{
     db.query("select * from tournament_type", (err, result)=>
     {
-        res.send(result)
+        const response = {
+            status: 200,
+            message: 'Fetched the tournament details succesfully',
+            data: result        };
+        res.json(response)
     })
 });
 
