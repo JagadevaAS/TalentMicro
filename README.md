@@ -1,16 +1,6 @@
-Hi Arun, all the file routing is done in their respective folder routing files and called them in the route folder, route folder is called in the server file.
+Hi Arun, Please find the below App's
 
 
-Please use below API's:
+Cricker App : Node app used to fetch the details of Cricketer Table
 
-http://localhost:3000/players 
-This API is used to fetch the all players details.
-
-http://localhost:3000/tour
-This API is used to fetch all the tournament details.
-
-http://localhost:3000/score
-This API is used to fetch all the score details of the players.
-
-http://localhost:3000/country
-This API is used to fetch all the country details.
+Fetch Api: In this I have worked of fetching the JSON data from the given URL and stored that in a particular table in the database.
