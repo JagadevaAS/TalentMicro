@@ -10,8 +10,14 @@ router.get("/country", (req,res)=>{
 
       db.query("select * from country_details", (err, result)=>
     {
-        res.status(200).json(result)
-    })
+        
+            const response = {
+                status: 200,
+                message: 'Fetched the Country details succesfully',
+                data: result        };
+            res.json(response)
+        })
+        
 });
 
 
