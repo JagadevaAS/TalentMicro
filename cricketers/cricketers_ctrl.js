@@ -6,8 +6,15 @@ const db = require("../db");
 
 router.get("/players", (req,res)=>{
     db.query("select * from player_details", (err, result)=>
+
+    
     {
-        res.send(result)
+        const response = {
+            status: 200,
+            message: 'Fetched the players details succesfully',
+            data: result        };
+        res.json(response)
+     
     })
 });
 
