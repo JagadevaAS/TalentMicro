@@ -7,7 +7,12 @@ const db = require("../db");
 router.get("/score", (req,res)=>{
     db.query("select * from score_details", (err, result)=>
     {
-        res.send(result)
+        const response = {
+            status: 200,
+            message: 'Fetched the Score details succesfully',
+            data: result        };
+        res.json(response)
+     
     })
 });
 
